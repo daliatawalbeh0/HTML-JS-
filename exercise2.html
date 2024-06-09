@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Exercise #2: Changing box color on click</title>
+    <style>
+      #mydiv {
+        width: 200px;
+        height: 200px;
+        border: 1px solid black;
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="mydiv" class="mydiv1"></div>
+    <script>
+      /*
+      function allfun(x) {
+        changecolor(x);
+        changecolor1(x);
+        changecolor2(x);
+      }
+      function changecolor(x) {
+        document.getElementById("mydiv").style.backgroundColor = "yellow";
+      }
+
+      function changecolor1(x) {
+        document.getElementById("mydiv").style.backgroundColor = "red";
+      }
+      function changecolor2(x) {
+        document.getElementById("mydiv").style.backgroundColor = "green";
+      }
+
+      var dd = document.querySelector("#mydiv");
+      dd.addEventListener("click", method1);
+      dd.addEventListener("click", method2);
+      function method1() {
+        document.getElementById("mydiv").style.backgroundColor = "yellow";
+      }
+      function method2() {
+        document.getElementById("mydiv").style.backgroundColor = "red";
+      }
+      const dd = document.getElementById("mydiv");
+      dd.addEventListener("click", () => {
+        dd.style.backgroundColor = "red";
+        var bgc = dd.style.backgroundColor;
+        if (bgc === "red") {
+          dd.style.backgroundColor = "yellow";
+        } else {
+          dd.style.backgroundColor = "green";
+        }
+      });
+
+      const btn = document.getElementById("mydiv");
+
+      btn.addEventListener("click", function (event) {
+        const backgroundColor = event.target.style.backgroundColor;
+
+        if (backgroundColor === "white") {
+          event.target.style.backgroundColor = "green";
+        } else if (backgroundColor === "green") {
+          event.target.style.backgroundColor = "purple";
+        } else {
+          event.target.style.backgroundColor = "salmon";
+        }
+      });*/
+      const dd = document.getElementById("mydiv");
+      const color = ["red", "yellow", "green", "blue"];
+      dd.style.backgroundColor = "white";
+      dd.addEventListener("click", function () {
+        const cindex = parseInt(Math.random() * color.length);
+        dd.style.backgroundColor = color[cindex];
+      });
+    </script>
+  </body>
+</html>
